@@ -5,11 +5,14 @@ import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import CenterFocusStrongOutlinedIcon from "@mui/icons-material/CenterFocusStrongOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isAccountOpen, setIsAccountOpen] = useState(false);
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
@@ -70,11 +73,27 @@ function Header() {
     const langHover = document.querySelector(".language-hover");
     setIsLangOpen(true);
     langHover.classList.remove("hidden");
+    const accHover = document.querySelector(".acc-hover");
+    accHover.classList.add("hidden");
   };
   const hideLanguage = () => {
     setIsLangOpen(false);
     const langHover = document.querySelector(".language-hover");
     langHover.classList.add("hidden");
+  };
+
+  //🟡Account
+  const showAccount = () => {
+    const accHover = document.querySelector(".acc-hover");
+    setIsAccountOpen(true);
+    accHover.classList.remove("hidden");
+    const langHover = document.querySelector(".language-hover");
+    langHover.classList.add("hidden");
+  };
+  const hideAccount = () => {
+    setIsAccountOpen(false);
+    const accHover = document.querySelector(".acc-hover");
+    accHover.classList.add("hidden");
   };
 
   return (
@@ -83,18 +102,18 @@ function Header() {
         {/* 🟡 header-logo */}
         <div className="header_logo flex text-white gap-[0.2rem] hover:border hover:border-white px-1 py-3 cursor-pointer">
           <img src="./assets/logo.png" alt="logo" className="w-24" />
-          <span className="text-lg -mt-1 font-semibold">Clone.in</span>
+          <span className="font-semibold">Clone.in</span>
         </div>
 
         {/* 🟡header-location */}
-        <div className="address-section relative">
+        <div className="address-section relative -mt-1">
           <button
             className="location text-white flex justify-center items-center gap-1 hover:border hover:border-white px-1 py-2 cursor-pointer"
             id="address"
             onClick={openModal}
           >
             <div className="mt-3 text-lg">
-              <PlaceOutlinedIcon fontSize="small" className="-mt-[1px]" />
+              <PlaceOutlinedIcon fontSize="small" className="-mt-[4px]" />
             </div>
             <div className="leading-[0.95rem] flex flex-col items-start">
               <h2 className="text-xs text-neutral-400 font-medium font-EmberBold">
@@ -311,7 +330,7 @@ function Header() {
               </option>
             </select>
           </div>
-          <div className="input-items w-[100%] xl:w-[745px] flex bg-white justify-between items-center">
+          <div className="input-items w-[100%] xl:w-[720px] flex bg-white justify-between items-center">
             <input
               type="text"
               name=""
@@ -433,17 +452,230 @@ function Header() {
           )} */}
         </div>
 
-        {/* 🟡language */}
-        <div className="account">
-          
+        {/* 🟡account details */}
+        <div
+          className="account flex flex-col cursor-pointer"
+          onMouseOver={showAccount}
+        >
+          <div className="acc-name text-white flex flex-col leading-[0.95rem] hover:border hover:border-white px-1 py-2 cursor-pointer">
+            <h2 class="text-xs text-neutral-200 font-medium font-EmberBold">
+              Hello, User
+            </h2>
+            <div class="flex">
+              <h1 class="text-[14px] font-bold font-EmberBold">
+                Account & Lists
+              </h1>
+              <ArrowDropDownRoundedIcon className="text-white -ml-[1px] -mt-[2px]" />
+            </div>
+          </div>
+
+          <div
+            className="acc-hover h-[499px] w-[500px] fixed mt-[50px] -ml-[16rem] bg-white rounded-md px-6 z-[999] hidden"
+            onMouseOut={hideAccount}
+          >
+            <div className="blank w-4 h-4 absolute rotate-45 ml-[342px] mt-[-0.25rem] bg-white"></div>
+            <div className="full flex justify-between itms-center px-6 py-3 bg-[#E7F4F5] mt-4 rounded-md">
+              <h2 className="text-[13px]">
+                Who is shopping? Select a profile.
+              </h2>
+              <h2 className="text-[14px] text-[#36919F] font-semibold hover:text-orange-500 hover:underline hover:underline-offset-1">
+                Manage Profile{" "}
+                <KeyboardArrowRightRoundedIcon className="text-[#36919F]" />
+              </h2>
+            </div>
+            <div className="two-sections flex gap-8 mt-3 text-[13px]">
+              <div className="first-div flex flex-col">
+                <div className="lists w-[12rem]">
+                  <h1 className="text-[1.12rem] font-bold">Your Lists</h1>
+                  <div className="shop mt-3 flex flex-col">
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Alexa Shopping List
+                    </a>
+                    <span className="text-neutral-400">0 items</span>
+                  </div>
+                </div>
+                <div className="shop2 border-t border-neutral-200 border-b mt-3 py-3 flex flex-col">
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Shopping List
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Art and Stuffs
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Books I wanna read
+                  </a>
+                </div>
+                <div className="shop3 py-3 flex flex-col">
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Create a Wish List
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Wish from Any Website
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Baby Wishlist
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Discover Your Style
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Explore Showroom
+                  </a>
+                </div>
+              </div>
+              <div className="second-div border-l border-neutral-200 pl-3 flex flex-col">
+                <div className="lists w-[12rem]">
+                  <h1 className="text-[1.12rem] font-bold">Your Account</h1>
+                  <div className="shop mt-3 flex flex-col gap-1">
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Account
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Orders
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Wish List
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Keep shopping for
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Recommendations
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Prime Membership
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Prime Video
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Subscribe & Save Items
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Memberships & Subscriptions
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Seller Account
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Content Library
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Devices
+                    </a>
+                    <a
+                      href=""
+                      className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                    >
+                      Your Free Amazon Business <br></br>Account
+                    </a>
+                  </div>
+                </div>
+                <div className="shop2 border-t border-neutral-200 mt-2 py-3 flex flex-col">
+                  <a
+                    href=""
+                    className="-mt-3 hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Switch Accounts
+                  </a>
+                  <a
+                    href=""
+                    className="hover:text-orange-500 hover:underline hover:underline-offset-1"
+                  >
+                    Sign Out
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 🟡Order details */}
+        <div className="orders" onMouseOver={hideAccount}>
+          <div className="text-white leading-[0.95rem] hover:border hover:border-white px-1 py-4 cursor-pointer">
+            <h2 className="text-xs text-neutral-400 font-medium font-EmberBold -mt-[8px]">
+              Returns
+            </h2>
+            <h1 className="text-[14px] font-bold font-EmberBold">& Orders</h1>
+          </div>
+        </div>
+
+        {/* 🟡cart */}
+        <div className="cart">
+          <div className="text-white hover:border hover:border-white px-2 py-3 cursor-pointer flex justify-center">
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 32 }}/>
+            <span className="absolute -mt-4 font-EmberBold text-amber-500 -ml-2">
+              0
+            </span>
+            <h1 className="text-[14px] font-bold font-EmberBold mt-3">Cart</h1>
+          </div>
         </div>
 
 
-
-
-        <div></div>
-        <div></div>
-        <div></div>
+        {/* <div></div> */}
       </div>
     </>
   );
