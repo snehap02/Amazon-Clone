@@ -5,6 +5,7 @@ import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTo
 
 const slideImage = [
   "/assets/img1.jpg",
+  "/assets/img0.jpg",
   "/assets/img2.jpg",
   "/assets/img3.jpg",
   "/assets/img4.jpg",
@@ -36,7 +37,7 @@ function Slider() {
       setCurrentImageIndex(count);
     }
   return (
-    <div className="slider w-full relative">
+    <div className="slider w-full relative h-[17rem] -z[1]">
         <img src={slideImage[currentImageIndex]} alt="" className='home-image w-full'/>
 
         <div className="arrows absolute w-full h-10 flex justify-between items-center top-10 sm:top-16 lg:top-28 px-3">

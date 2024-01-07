@@ -459,7 +459,7 @@ function Header() {
         >
           <div className="acc-name text-white flex flex-col leading-[0.95rem] hover:border hover:border-white px-1 py-2 cursor-pointer">
             <h2 class="text-xs text-neutral-200 font-medium font-EmberBold">
-              Hello, User
+              Hello, sign in
             </h2>
             <div class="flex">
               <h1 class="text-[14px] font-bold font-EmberBold">
@@ -470,11 +470,15 @@ function Header() {
           </div>
 
           <div
-            className="acc-hover h-[499px] w-[500px] fixed mt-[50px] -ml-[16rem] bg-white rounded-md px-6 z-[999] hidden"
+            className="acc-hover h-[470px] w-[500px] fixed mt-[50px] -ml-[16rem] bg-white rounded-md px-6 z-[999] hidden"
             onMouseOut={hideAccount}
           >
             <div className="blank w-4 h-4 absolute rotate-45 ml-[342px] mt-[-0.25rem] bg-white"></div>
-            <div className="full flex justify-between itms-center px-6 py-3 bg-[#E7F4F5] mt-4 rounded-md">
+            <div className="sign-in flex flex-col justify-center items-center py-2">
+              <button className="bg-[#FFD814] text-sm px-24 py-2 rounded-md">Sign in</button>
+              <h2 className="text-xs mt-[5px]">New Customer? <span className="text-[#36919F] hover:text-orange-600 cursor-pointer hover:underline hover:underline-offset-1">Start here.</span></h2>
+            </div>
+            {/* <div className="full flex justify-between itms-center px-6 py-3 bg-[#E7F4F5] mt-4 rounded-md">
               <h2 className="text-[13px]">
                 Who is shopping? Select a profile.
               </h2>
@@ -482,7 +486,7 @@ function Header() {
                 Manage Profile{" "}
                 <KeyboardArrowRightRoundedIcon className="text-[#36919F]" />
               </h2>
-            </div>
+            </div> */}
             <div className="two-sections flex gap-8 mt-3 text-[13px]">
               <div className="first-div flex flex-col">
                 <div className="lists w-[12rem]">
@@ -634,7 +638,7 @@ function Header() {
                     </a>
                   </div>
                 </div>
-                <div className="shop2 border-t border-neutral-200 mt-2 py-3 flex flex-col">
+                {/* <div className="shop2 border-t border-neutral-200 mt-2 py-3 flex flex-col">
                   <a
                     href=""
                     className="-mt-3 hover:text-orange-500 hover:underline hover:underline-offset-1"
@@ -647,7 +651,7 @@ function Header() {
                   >
                     Sign Out
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
