@@ -6,7 +6,7 @@ import Home from './Home';
 
 function App() {
   return (
-    <div className="App w-full max-h-[100vh]">
+    <div className="App w-full min-h-[100vh]">
       {/* <h1 className='text-center'>hello</h1> */}
       {/* header */}
       <Header/>
