@@ -4,12 +4,6 @@ import Slider from "./Slider";
 import Product from "./Product";
 
 function Home() {
-  const Box = [
-    {
-      id: 0,
-      image: "/assets/sale.jpg",
-    },
-  ];
   const Box1 = [
     {
       id: 1,
@@ -98,6 +92,72 @@ function Home() {
       image: "/assets/others4.jpg",
     },
   ];
+  const Box5 = [
+    {
+      id: 1,
+      detail: "Budget TVs | Up to 60%",
+      image: "/assets/tv1.jpg",
+    },
+    {
+      id: 2,
+      detail: "4K TVs | Up to 24 months No Cost EMI",
+      image: "/assets/tv2.jpg",
+    },
+    {
+      id: 3,
+      detail: "Big Screens | Up to 60% off",
+      image: "/assets/tv3.jpg",
+    },
+    {
+      id: 4,
+      detail: "Ultra Premium TVs | Up to 50% off",
+      image: "/assets/tv4.jpg",
+    },
+  ];
+  const Box6 = [
+    {
+      id: 1,
+      detail: "Up to 75% off | boAt",
+      image: "/assets/headphone11.jpg",
+    },
+    {
+      id: 2,
+      detail: "Up to 75% off | boult",
+      image: "/assets/headphone2.jpg",
+    },
+    {
+      id: 3,
+      detail: "Up to 75% off | Noise",
+      image: "/assets/headphone3.jpg",
+    },
+    {
+      id: 4,
+      detail: "Up to 75% off | Zebronic",
+      image: "/assets/headphone4.jpg",
+    },
+  ];
+  const Box7 = [
+    {
+      id: 1,
+      detail: "Air conditioners",
+      image: "/assets/app1.jpg",
+    },
+    {
+      id: 2,
+      detail: "Refregirators",
+      image: "/assets/app2.jpg",
+    },
+    {
+      id: 3,
+      detail: "Microwaves",
+      image: "/assets/app3.jpg",
+    },
+    {
+      id: 4,
+      detail: "Washing machines",
+      image: "/assets/app4.jpg",
+    },
+  ];
 
   return (
     <div className="home px-2 bg-[#dcdede] min-h-[200vh]">
@@ -105,8 +165,8 @@ function Home() {
         <Slider />
 
         <div className="home-row1 flex gap-5 z-10 m-4 -mt-1">
-          <div className="first-item flex flex-col justify-center items-center py-2 mb-2 bg-white">
-            <h2 className="text-[20px] font-bold -mt-3">
+          <div className="first-item flex flex-col justify-center items-center bg-white py-5">
+            <h2 className="text-[20px] font-bold -ml-6">
               Starts early for Prime members
             </h2>
             <div className="img p-4 mt-3">
@@ -124,51 +184,61 @@ function Home() {
           </div>
           <div className="second-item bg-white flex flex-col">
             <Product title="Revamp your home in style" Box1={Box1} />
-            <div className="final-text -mt-9">
-              <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer">
+            <div className="final-text">
+              <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-7">
                 Explore more
               </h2>
             </div>
           </div>
-          <div className="third-item bg-white">
+          <div className="third-item bg-white flex flex-col">
             <Product
               title="Up to 60% off | Styles for men"
-              showMore="End of season sale"
               Box1={Box2}
             />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-7">
+                End of season sale
+              </h2>
           </div>
           <div className="fourth-item bg-white">
             <Product title="Starting ₹139 | Amazon brands & more" Box1={Box3} />
           </div>
         </div>
-        <div className="home-row2 flex gap-6 z-10 m-4 -mt-1">
-          <div className="first-item bg-white">
+        <div className="home-row2 flex gap-5 z-10 m-4 -mt-1">
+          <div className="first-item bg-white flex flex-col h-[26rem]">
             <Product
               title="Starting ₹99 | All your home improvement needs"
-              showMore="Explore all"
               Box1={Box4}
             />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+                Explore all
+              </h2>
           </div>
-          <div className="second-item bg-white">
+          <div className="second-item bg-white flex flex-col">
             <Product
-              title="Starting ₹99 | All your home improvement needs"
-              showMore="Explore all"
-              Box1={Box4}
+              title="Get the perfect screen size | TVs Starting ₹6,999"
+              Box1={Box5}
             />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+                See all offers
+              </h2>
           </div>
-          <div className="third-item bg-white">
+          <div className="third-item bg-white flex flex-col">
             <Product
-              title="Starting ₹99 | All your home improvement needs"
-              showMore="Explore all"
-              Box1={Box4}
+              title="Up to 75% off | Headphones"
+              Box1={Box6}
             />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+                See all offers
+              </h2>
           </div>
-          <div className="fourth-item bg-white">
+          <div className="fourth-item bg-white flex flex-col">
             <Product
-              title="Starting ₹99 | All your home improvement needs"
-              showMore="Explore all"
-              Box1={Box4}
+              title="Appliances for your home | Up to 55% off"
+              Box1={Box7}
             />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+                See more
+              </h2>
           </div>
         </div>
         <div className="home-row-3"></div>

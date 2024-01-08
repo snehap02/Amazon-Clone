@@ -2,12 +2,12 @@ import React from "react";
 
 function Product({ title, Box1}) {
   return (
-    <div className="product h-[22.5rem] w-[22rem] flex flex-col">
+    <div className="product h-[20rem] w-[22rem] flex flex-col py-5">
       <div className="first-div">
         <div className="product-head px-4">
           <h2 className="text-[20px] font-bold">{title}</h2>
         </div>
-        <div className="product-items p-4 grid grid-cols-2 gap-3 -mt-7 cursor-pointer">
+        <div className="product-items p-4 grid grid-cols-2 gap-3  cursor-pointer">
           {Box1.map((val, index) => (
             <div key={index}>
               <img src={val.image} alt="" />
