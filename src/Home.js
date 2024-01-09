@@ -279,7 +279,7 @@ function Home() {
     },
   ];
   return (
-    <div className="home px-2 bg-[#dcdede] min-h-[200vh]">
+    <div className="home px-2 bg-[#dcdede] min-h-[256vh]">
       <div className="home-container flex flex-col">
         <Slider />
 
@@ -408,22 +408,7 @@ function Home() {
             </h2>
           </div>
         </div>
-
-
-        
       </div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex itaque odio,
-      dicta nihil cum assumenda suscipit ut voluptatibus veniam dolor, quas
-      commodi soluta dolorem, voluptatem perferendis? Veritatis repellat, rerum
-      minima, saepe dolores suscipit eaque blanditiis dolorum temporibus quia
-      molestias perspiciatis eius quos pariatur cupiditate architecto placeat
-      fugiat quasi quibusdam iure libero! Necessitatibus, praesentium? Officiis
-      necessitatibus iusto, ipsa ipsam praesentium explicabo quos dolores quas
-      neque veniam odio sequi temporibus, perferendis eveniet, fuga eos
-      aspernatur? Voluptatem dolorum error eveniet molestiae blanditiis hic nam
-      quibusdam, consequatur distinctio sit culpa deleniti exercitationem ipsam
-      nisi id voluptate fugit nemo ex possimus, ipsa dicta molestias eius
-      dolores? Sequi aliquam quibusdam
     </div>
   );
 }
