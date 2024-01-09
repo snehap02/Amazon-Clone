@@ -158,7 +158,68 @@ function Home() {
       image: "/assets/app4.jpg",
     },
   ];
-
+  const img = [
+    {
+      id: 1,
+      image: "/assets/slide0.jpg",
+    },
+    {
+      id: 2,
+      image: "/assets/slide1.jpg",
+    },
+    {
+      id: 3,
+      image: "/assets/slide2.jpg",
+    },
+    // {
+    //   id: 4,
+    //   image: "/assets/slide3.jpg",
+    // },
+    {
+      id: 5,
+      image: "/assets/slide4.jpg",
+    },
+    {
+      id: 6,
+      image: "/assets/slide5.jpg",
+    },
+    {
+      id: 7,
+      image: "/assets/slide6.jpg",
+    },
+    {
+      id: 8,
+      image: "/assets/slide7.jpg",
+    },
+    {
+      id: 9,
+      image: "/assets/slide8.jpg",
+    },
+    {
+      id: 10,
+      image: "/assets/slide9.jpg",
+    },
+    {
+      id: 11,
+      image: "/assets/slide10.jpg",
+    },
+    // {
+    //   id: 12,
+    //   image: "/assets/slide11.jpg",
+    // },
+    {
+      id: 13,
+      image: "/assets/slide12.jpg",
+    },
+    {
+      id: 14,
+      image: "/assets/slide13.jpg",
+    },
+    {
+      id: 15,
+      image: "/assets/slide14.jpg",
+    },
+  ];
   return (
     <div className="home px-2 bg-[#dcdede] min-h-[200vh]">
       <div className="home-container flex flex-col">
@@ -191,13 +252,10 @@ function Home() {
             </div>
           </div>
           <div className="third-item bg-white flex flex-col">
-            <Product
-              title="Up to 60% off | Styles for men"
-              Box1={Box2}
-            />
+            <Product title="Up to 60% off | Styles for men" Box1={Box2} />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-7">
-                End of season sale
-              </h2>
+              End of season sale
+            </h2>
           </div>
           <div className="fourth-item bg-white">
             <Product title="Starting ₹139 | Amazon brands & more" Box1={Box3} />
@@ -210,8 +268,8 @@ function Home() {
               Box1={Box4}
             />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
-                Explore all
-              </h2>
+              Explore all
+            </h2>
           </div>
           <div className="second-item bg-white flex flex-col">
             <Product
@@ -219,17 +277,14 @@ function Home() {
               Box1={Box5}
             />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
-                See all offers
-              </h2>
+              See all offers
+            </h2>
           </div>
           <div className="third-item bg-white flex flex-col">
-            <Product
-              title="Up to 75% off | Headphones"
-              Box1={Box6}
-            />
+            <Product title="Up to 75% off | Headphones" Box1={Box6} />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
-                See all offers
-              </h2>
+              See all offers
+            </h2>
           </div>
           <div className="fourth-item bg-white flex flex-col">
             <Product
@@ -237,11 +292,26 @@ function Home() {
               Box1={Box7}
             />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
-                See more
-              </h2>
+              See more
+            </h2>
           </div>
         </div>
-        <div className="home-row-3"></div>
+        <div className="home-row-3 bg-white s-full h-[17rem] mx-4 px-3 py-2 flex flex-col gap-2 overflow-x-hidden">
+          <h2 className="text-[22px] font-bold">
+            Up to 50% off | Elevate your audio aesthetic with headphones and
+            earphones{" "}
+            <span className="text-xs text-[#36919F] hover:text-orange-600 cursor-pointer ml-5 hover:underline underline-offset-1">
+              See all offers
+            </span>
+          </h2>
+          <div className="images flex overflow-x-scroll overflow-y-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-full">
+            {img.map((val, index) => (
+              <div key={index} className="min-w-64 flex justify-center mb-2">
+                <img src={val.image} className="min-w-20 object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="home-row-4"></div>
       </div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex itaque odio,
