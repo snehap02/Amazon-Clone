@@ -110,8 +110,8 @@ function Footer() {
       </div>
       <div className="footer-three w-full bg-[#232F3E] flex flex-col gap-5 justify-center items-center border-t border-[#485769] py-10">
         <a href="#" className="logo flex text-white gap-[0.2rem]">
-          <img src="./assets/logo.png" alt="logo" className="w-24" />
-          <span className="font-semibold">Clone.in</span>
+          <img src="./assets/logo.png" alt="logo" className="w-20" />
+          <span className="font-semibold text-xs mt-[1px]">Clone.in</span>
         </a>
         <div className="languages flex flex-col justify-center items-center gap-1">
           <div className="lang-one flex gap-3 text-sm text-white font-light">
