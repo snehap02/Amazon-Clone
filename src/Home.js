@@ -158,6 +158,72 @@ function Home() {
       image: "/assets/app4.jpg",
     },
   ];
+  const Box8 = [
+    {
+      id: 1,
+      detail: "Sports shoes",
+      image: "/assets/bestsell1.jpg",
+    },
+    {
+      id: 2,
+      detail: "Jewellery & accessories",
+      image: "/assets/bestsell2.jpeg",
+    },
+    {
+      id: 3,
+      detail: "Watches & smartwatches",
+      image: "/assets/bestsell3.jpeg",
+    },
+    {
+      id: 4,
+      detail: "Bags, wallets & luggage",
+      image: "/assets/bestsell4.jpeg",
+    },
+  ];
+  const Box9 = [
+    {
+      id: 1,
+      detail: "Gift for men",
+      image: "/assets/birthday1.jpg",
+    },
+    {
+      id: 2,
+      detail: "Gift for women",
+      image: "/assets/birthday2.jpg",
+    },
+    {
+      id: 3,
+      detail: "Gift for boys",
+      image: "/assets/birthday3.jpg",
+    },
+    {
+      id: 4,
+      detail: "Gift for girls",
+      image: "/assets/birthday4.jpg",
+    },
+  ];
+  const Box10 = [
+    {
+      id: 1,
+      detail: "Allen Solly, Fort Collins & more",
+      image: "/assets/styling1.jpg",
+    },
+    {
+      id: 2,
+      detail: "Biba, Aurelia & more",
+      image: "/assets/styling2.jpg",
+    },
+    {
+      id: 3,
+      detail: "Womanist, Mimosa & more",
+      image: "/assets/styling3.jpg",
+    },
+    {
+      id: 4,
+      detail: "Harpa, Only & more",
+      image: "/assets/styling4.jpg",
+    },
+  ];
   const img = [
     {
       id: 1,
@@ -171,52 +237,44 @@ function Home() {
       id: 3,
       image: "/assets/slide2.jpg",
     },
-    // {
-    //   id: 4,
-    //   image: "/assets/slide3.jpg",
-    // },
     {
-      id: 5,
+      id: 4,
       image: "/assets/slide4.jpg",
     },
     {
-      id: 6,
+      id: 5,
       image: "/assets/slide5.jpg",
     },
     {
-      id: 7,
+      id: 6,
       image: "/assets/slide6.jpg",
     },
     {
-      id: 8,
+      id: 7,
       image: "/assets/slide7.jpg",
     },
     {
-      id: 9,
+      id: 8,
       image: "/assets/slide8.jpg",
     },
     {
-      id: 10,
+      id: 9,
       image: "/assets/slide9.jpg",
     },
     {
-      id: 11,
+      id: 10,
       image: "/assets/slide10.jpg",
     },
-    // {
-    //   id: 12,
-    //   image: "/assets/slide11.jpg",
-    // },
     {
-      id: 13,
+      id: 11,
       image: "/assets/slide12.jpg",
     },
     {
-      id: 14,
+      id: 12,
       image: "/assets/slide13.jpg",
     },
     {
-      id: 15,
+      id: 13,
       image: "/assets/slide14.jpg",
     },
   ];
@@ -312,7 +370,47 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className="home-row-4"></div>
+        <div className="home-row4 flex gap-5 z-10 m-4">
+          <div className="first-item bg-white flex flex-col h-[26rem]">
+            <Product
+              title="Bestsellers | Shoes, jewellery & more"
+              Box1={Box8}
+            />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+              See all offers
+            </h2>
+          </div>
+          <div className="second-item bg-white flex flex-col">
+            <Product
+              title="Birthday store"
+              Box1={Box9}
+            />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+              See more
+            </h2>
+          </div>
+          <div className="third-item bg-white flex flex-col px-4 w-full">
+          <h2 className="text-[20px] font-bold mt-5">Starting ₹99 | Indoor plants</h2>
+          <div className="flex justify-center">
+          <img src="/assets/plant.jpg" alt=""  className="mt-4 w-[19.5rem]"/>
+          </div>
+            <h2 className="text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-5">
+              See more
+            </h2>
+          </div>
+          <div className="fourth-item bg-white flex flex-col w-full px-3">
+          <Product
+              title="Minimum 50% off | Top styles for her"
+              Box1={Box10}
+            />
+            <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
+              See all details
+            </h2>
+          </div>
+        </div>
+
+
+        
       </div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex itaque odio,
       dicta nihil cum assumenda suscipit ut voluptatibus veniam dolor, quas
