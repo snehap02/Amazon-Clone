@@ -82,7 +82,7 @@ function SubHeader() {
           </div>
         </div>
         <div className="advertise hover:border hover:border-white px-1 py-">
-            <img src="/assets/ad.png" alt="" className='w-80 cursor-pointer' />
+            <img src="/assets/ad.png" alt="Advertisement" className='w-80 cursor-pointer' />
         </div>
     </div>
   )

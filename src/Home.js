@@ -291,7 +291,7 @@ function Home() {
             <div className="img p-4 mt-3">
               <img
                 src="/assets/sale.jpg"
-                alt=""
+                alt="Republic Sale"
                 className="w-[20rem] cursor-pointer"
               />
             </div>
@@ -362,7 +362,7 @@ function Home() {
               See all offers
             </span>
           </h2>
-          <div className="images flex overflow-x-scroll overflow-y-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-gray-100 scrollbar-thumb-rounded-full">
+          <div className="images flex overflow-x-scroll overflow-y-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-gray-100 hover:scrollbar-thumb-slate-400 hover:cursor-pointer scrollbar-thumb-rounded-full">
             {img.map((val, index) => (
               <div key={index} className="min-w-64 flex justify-center mb-2">
                 <img src={val.image} className="min-w-20 object-cover" />
@@ -392,7 +392,7 @@ function Home() {
           <div className="third-item bg-white flex flex-col px-4 w-full">
           <h2 className="text-[20px] font-bold mt-5">Starting ₹99 | Indoor plants</h2>
           <div className="flex justify-center">
-          <img src="/assets/plant.jpg" alt=""  className="mt-4 w-[19.5rem]"/>
+          <img src="/assets/plant.jpg" alt="Plant"  className="mt-4 w-[19.5rem]"/>
           </div>
             <h2 className="text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-5">
               See more

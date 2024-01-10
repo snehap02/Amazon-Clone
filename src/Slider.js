@@ -38,7 +38,7 @@ function Slider() {
     }
   return (
     <div className="slider w-full relative h-[17rem] -z[1]">
-        <img src={slideImage[currentImageIndex]} alt="" className='home-image w-full'/>
+        <img src={slideImage[currentImageIndex]} alt="Slider-image" className='home-image w-full'/>
 
         <div className="arrows absolute w-full h-10 flex justify-between items-center top-10 sm:top-16 lg:top-28 px-3">
             <button onClick={handleOnPreviousClick}><ArrowBackIosTwoToneIcon sx={{ fontSize: 38 }} className="text-white"/></button>

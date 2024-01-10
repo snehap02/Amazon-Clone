@@ -10,7 +10,7 @@ function Product({ title, Box1}) {
         <div className="product-items p-4 grid grid-cols-2 gap-3  cursor-pointer">
           {Box1.map((val, index) => (
             <div key={index}>
-              <img src={val.image} alt="" />
+              <img src={val.image} alt="Box-image" />
               <h2 className="text-xs tracking-wide">{val.detail}</h2>
             </div>
           ))}

@@ -360,7 +360,7 @@ function Header() {
         >
           <div className="language-items gap-1 flex justify-center items-center hover:border hover:border-white px-1 py-2 relative">
             <div className="flag">
-              <img src="./assets/india.png" alt="" className="w-5" />
+              <img src="./assets/india.png" alt="Flag" className="w-5" />
             </div>
             <h2 class="text-sm text-white">EN</h2>
             <ArrowDropDownRoundedIcon className="text-white mt-2 -ml-2" />
@@ -431,7 +431,7 @@ function Header() {
               </div>
               <div className="lang-line1 bg-neutral-300 h-[0.4px] w-full mt-4"></div>
               <div className="imgAndText flex gap-2 items-center mt-3">
-                <img src="./assets/india.png" alt="flag" class="w-4" />
+                <img src="./assets/india.png" alt="Flag" class="w-4" />
                 <h2 className="text-xs font-Work-Sans">
                   You are shopping on AmazonClone.in
                 </h2>
