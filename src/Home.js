@@ -358,9 +358,9 @@ function Home() {
           <h2 className="text-[22px] font-bold">
             Up to 50% off | Elevate your audio aesthetic with headphones and
             earphones{" "}
-            <span className="text-xs text-[#36919F] hover:text-orange-600 cursor-pointer ml-5 hover:underline underline-offset-1">
+            <a href="https://www.amazon.in/s?k=headphones+earphones&crid=FC4JH4VVELZE&sprefix=headphones+earphones+bags%2Caps%2C310&ref=nb_sb_noss" target="_blank" className="text-xs text-[#36919F] hover:text-orange-600 cursor-pointer ml-5 hover:underline underline-offset-1">
               See all offers
-            </span>
+            </a>
           </h2>
           <div className="images flex overflow-x-scroll overflow-y-hidden scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-gray-100 hover:scrollbar-thumb-slate-400 hover:cursor-pointer scrollbar-thumb-rounded-full">
             {img.map((val, index) => (
