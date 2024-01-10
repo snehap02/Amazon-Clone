@@ -117,23 +117,23 @@ function Home() {
   const Box6 = [
     {
       id: 1,
-      detail: "Up to 75% off | boAt",
-      image: "/assets/headphone11.jpg",
+      detail: "Clothing",
+      image: "/assets/fashion0.jpg",
     },
     {
       id: 2,
-      detail: "Up to 75% off | boult",
-      image: "/assets/headphone2.jpg",
+      detail: "Backpacks",
+      image: "/assets/fashion1.jpg",
     },
     {
       id: 3,
-      detail: "Up to 75% off | Noise",
-      image: "/assets/headphone3.jpg",
+      detail: "Footwear",
+      image: "/assets/fashion2.jpg",
     },
     {
       id: 4,
-      detail: "Up to 75% off | Zebronic",
-      image: "/assets/headphone4.jpg",
+      detail: "View all",
+      image: "/assets/fashion3.jpg",
     },
   ];
   const Box7 = [
@@ -183,23 +183,23 @@ function Home() {
   const Box9 = [
     {
       id: 1,
-      detail: "Gift for men",
-      image: "/assets/birthday1.jpg",
+      detail: "Starting ₹199 | Water bottles",
+      image: "/assets/stuff1.jpg",
     },
     {
       id: 2,
-      detail: "Gift for women",
-      image: "/assets/birthday2.jpg",
+      detail: "Starting ₹299 | Storage containers",
+      image: "/assets/stuff2.jpg",
     },
     {
       id: 3,
-      detail: "Gift for boys",
-      image: "/assets/birthday3.jpg",
+      detail: "Starting ₹499 | Cookware",
+      image: "/assets/stuff3.jpg",
     },
     {
       id: 4,
-      detail: "Gift for girls",
-      image: "/assets/birthday4.jpg",
+      detail: "Starting ₹399 | Racks & holders",
+      image: "/assets/stuff4.jpg",
     },
   ];
   const Box10 = [
@@ -339,7 +339,7 @@ function Home() {
             </h2>
           </div>
           <div className="third-item bg-white flex flex-col">
-            <Product title="Up to 75% off | Headphones" Box1={Box6} />
+            <Product title="Under ₹499 | Pocket-friendly fashion" Box1={Box6} />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
               See all offers
             </h2>
@@ -382,7 +382,7 @@ function Home() {
           </div>
           <div className="second-item bg-white flex flex-col">
             <Product
-              title="Birthday store"
+              title="Starting ₹199 | Amazon brands & more"
               Box1={Box9}
             />
             <h2 className="ml-4 text-xs text-[#36919F] hover:text-orange-600 cursor-pointer mt-14">
