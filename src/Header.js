@@ -100,10 +100,10 @@ function Header() {
     <>
       <div className="header flex justify-between items-center h-[4rem] w-full bg-[#131921] px-3 z-[999] top-0 sticky">
         {/* 🟡 header-logo */}
-        <div className="header_logo flex text-white gap-[0.2rem] hover:border hover:border-white px-1 py-3 cursor-pointer">
+        <a href="/" className="header_logo flex text-white gap-[0.2rem] hover:border hover:border-white px-1 py-3 cursor-pointer">
           <img src="./assets/logo.png" alt="logo" className="w-24" />
           <span className="font-semibold">Clone.in</span>
-        </div>
+        </a>
 
         {/* 🟡header-location */}
         <div className="address-section relative -mt-1">
@@ -669,13 +669,13 @@ function Header() {
 
         {/* 🟡cart */}
         <div className="cart">
-          <div className="text-white hover:border hover:border-white px-2 py-3 cursor-pointer flex justify-center">
+          <a href="/checkout" className="text-white hover:border hover:border-white px-2 py-3 cursor-pointer flex justify-center">
             <ShoppingCartOutlinedIcon sx={{ fontSize: 32 }}/>
             <span className="absolute -mt-4 font-EmberBold text-amber-500 -ml-2">
               0
             </span>
             <h1 className="text-[14px] font-bold font-EmberBold mt-3">Cart</h1>
-          </div>
+          </a>
         </div>
 
 
